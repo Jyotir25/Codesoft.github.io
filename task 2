@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int num, guess, tries = 0;
+	num = rand() % 100 + 1; // generates a random number between 1 and 100 for example..
+	cout << "Number Guessing Game : Created By Jyoti Ranjan\n\n";
+
+	do
+	{
+		cout << "Enter a guess between 1 and 100 : ";
+		cin >> guess;
+		tries++;
+
+		if (guess > num)
+			cout << "Too high!\n\n";
+		else if (guess < num)
+			cout << "Too low!\n\n";
+		else
+			cout << "\nCorrect! You got the right guess in " << tries << " guesses!\n";
+	} while (guess != num);
+
+	return 0;
+}
